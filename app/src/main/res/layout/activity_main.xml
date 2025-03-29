@@ -4,94 +4,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_color">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:gravity="center"
         android:padding="16dp"
-        android:background="@color/primary_color">
+        android:background="#80FFFFFF">
 
         <ImageButton
             android:id="@+id/uaFlag"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ua"
+            android:background="@drawable/circle_button"
             android:contentDescription="@string/ukrainian"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ua" />
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:alpha="1.0"/>
 
         <ImageButton
             android:id="@+id/gbFlag"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/gb"
+            android:background="@drawable/circle_button"
             android:contentDescription="@string/english"
-            android:scaleType="fitCenter"
-            android:src="@drawable/gb" />
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:alpha="0.5"/>
 
         <ImageButton
             android:id="@+id/frFlag"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/fr"
+            android:background="@drawable/circle_button"
             android:contentDescription="@string/french"
-            android:scaleType="fitCenter"
-            android:src="@drawable/fr" />
+            android:layout_margin="8dp"
+            android:scaleType="centerCrop"
+            android:alpha="0.5"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:gravity="center"
         android:padding="16dp">
 
-        <ImageButton
-            android:id="@+id/catButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleType="fitCenter"
-            android:src="@drawable/cat"
-            android:contentDescription="@string/cat"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
 
-        <ImageButton
-            android:id="@+id/cowButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleType="fitCenter"
-            android:src="@drawable/cow"
-            android:contentDescription="@string/cow"/>
+            <ImageButton
+                android:id="@+id/catButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/cat"
+                android:background="@drawable/circle_button"
+                android:contentDescription="@string/cat"
+                android:scaleType="centerCrop"/>
 
-        <ImageButton
-            android:id="@+id/dogButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleType="fitCenter"
-            android:src="@drawable/dog1"
-            android:contentDescription="@string/dog"/>
+            <ImageButton
+                android:id="@+id/cowButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/cow"
+                android:background="@drawable/circle_button"
+                android:contentDescription="@string/cow"
+                android:scaleType="centerCrop"/>
 
-        <ImageButton
-            android:id="@+id/chickenButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:scaleType="fitCenter"
-            android:src="@drawable/chicken"
-            android:contentDescription="@string/chicken"/>
+            <ImageButton
+                android:id="@+id/dogButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/dog1"
+                android:background="@drawable/circle_button"
+                android:contentDescription="@string/dog"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/chickenButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/chicken"
+                android:background="@drawable/circle_button"
+                android:contentDescription="@string/chicken"
+                android:scaleType="centerCrop"/>
+
+            <ImageButton
+                android:id="@+id/pigButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/pig"
+                android:background="@drawable/circle_button"
+                android:contentDescription="@string/pig"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -43,15 +43,15 @@ public class AnimalActivity extends AppCompatActivity {
         animalImage.setImageResource(imageResourceId);
 
         // Налаштовуємо кнопки відтворення звуку
-        Button playSoundButton1 = findViewById(R.id.playSoundButton1);
-        Button playSoundButton2 = findViewById(R.id.playSoundButton2);
+        Button playSound1Button = findViewById(R.id.playSound1Button);
+        Button playSound2Button = findViewById(R.id.playSound2Button);
 
         // Встановлюємо текст кнопок з урахуванням поточної мови
-        playSoundButton1.setText(getString(R.string.play_sound_1));
-        playSoundButton2.setText(getString(R.string.play_sound_2));
+        playSound1Button.setText(getString(R.string.play_sound_1));
+        playSound2Button.setText(getString(R.string.play_sound_2));
 
-        playSoundButton1.setOnClickListener(v -> playSound(soundResourceId1));
-        playSoundButton2.setOnClickListener(v -> playSound(soundResourceId2));
+        playSound1Button.setOnClickListener(v -> playSound(soundResourceId1));
+        playSound2Button.setOnClickListener(v -> playSound(soundResourceId2));
 
         // Налаштовуємо кнопку "Назад"
         Button backButton = findViewById(R.id.backButton);

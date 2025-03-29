@@ -23,4 +23,5 @@
     <string name="play_sound_1">Son 1</string>
     <string name="play_sound_2">Son 2</string>
     <string name="chicken">Poule</string>
+    <string name="pig">Cochon</string>
 </resources>
