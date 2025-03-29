@@ -46,11 +46,13 @@ public class MainActivity extends AppCompatActivity {
         ImageButton catButton = findViewById(R.id.catButton);
         ImageButton cowButton = findViewById(R.id.cowButton);
         ImageButton dogButton = findViewById(R.id.dogButton);
+        ImageButton chickenButton = findViewById(R.id.chickenButton);
 
         // Встановлюємо обробники натискань
         catButton.setOnClickListener(v -> openAnimalPage(R.drawable.cat, R.raw.cat_sound, R.raw.cat_sound2));
         cowButton.setOnClickListener(v -> openAnimalPage(R.drawable.cow, R.raw.cow_sound, R.raw.cow_sound2));
         dogButton.setOnClickListener(v -> openAnimalPage(R.drawable.dog1, R.raw.dog_sound, R.raw.dog_sound2));
+        chickenButton.setOnClickListener(v -> openAnimalPage(R.drawable.chicken, R.raw.chicken_sound, R.raw.chicken_sound2));
     }
 
     private void setLanguage(String languageCode, ImageButton button) {
