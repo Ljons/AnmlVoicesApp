@@ -27,4 +27,11 @@
     <string name="french">Français</string>
     <string name="chicken">Курка</string>
     <string name="pig">Свиня</string>
+    <string name="sound_description">%s каже так:</string>
+    <!-- Звуки тварин -->
+    <string name="cat_sound">Мяу-мяу</string>
+    <string name="dog_sound">Гав-гав</string>
+    <string name="cow_sound">Му-у-у</string>
+    <string name="chicken_sound">Ко-ко-ко</string>
+    <string name="pig_sound">Хрю-хрю</string>
 </resources>

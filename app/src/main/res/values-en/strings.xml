@@ -14,4 +14,11 @@
     <string name="play_sound_2">Sound 2</string>
     <string name="chicken">Chicken</string>
     <string name="pig">Pig</string>
+    <string name="sound_description">%s says:</string>
+    <!-- Animal sounds -->
+    <string name="cat_sound">Meow-meow</string>
+    <string name="dog_sound">Woof-woof</string>
+    <string name="cow_sound">Moo</string>
+    <string name="chicken_sound">Cluck-cluck</string>
+    <string name="pig_sound">Oink-oink</string>
 </resources> 

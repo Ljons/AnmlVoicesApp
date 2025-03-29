@@ -24,4 +24,11 @@
     <string name="play_sound_2">Son 2</string>
     <string name="chicken">Poule</string>
     <string name="pig">Cochon</string>
+    <string name="sound_description">%s fait:</string>
+    <!-- Sons des animaux -->
+    <string name="cat_sound">Miaou-miaou</string>
+    <string name="dog_sound">Ouaf-ouaf</string>
+    <string name="cow_sound">Meuh</string>
+    <string name="chicken_sound">Cot-cot</string>
+    <string name="pig_sound">Groin-groin</string>
 </resources>

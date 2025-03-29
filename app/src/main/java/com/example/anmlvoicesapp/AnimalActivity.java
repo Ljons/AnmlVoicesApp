@@ -31,6 +31,8 @@ public class AnimalActivity extends AppCompatActivity {
     private Animation bounceAndRotateAnimation;
     private Button currentPlayingButton;
     private boolean isAnimating = false;
+    private TextView soundDescriptionText;
+    private String animalSoundText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,19 +70,26 @@ public class AnimalActivity extends AppCompatActivity {
         ImageView animalImage = findViewById(R.id.animalImage);
         animalImage.setImageResource(imageResourceId);
 
-        // Додаємо обробник натискання на зображення
-        animalImage.setOnClickListener(v -> {
-            if (!isAnimating) {
-                v.startAnimation(bounceAndRotateAnimation);
-                playSound(soundResourceId1);
-            }
-        });
+        // Налаштовуємо текст звуку
+        soundDescriptionText = findViewById(R.id.soundDescriptionText);
+        
+        // Визначаємо текст звуку тварини
+        if (imageResourceId == R.drawable.cat) {
+            animalSoundText = getString(R.string.cat_sound);
+        } else if (imageResourceId == R.drawable.dog1) {
+            animalSoundText = getString(R.string.dog_sound);
+        } else if (imageResourceId == R.drawable.cow) {
+            animalSoundText = getString(R.string.cow_sound);
+        } else if (imageResourceId == R.drawable.chicken) {
+            animalSoundText = getString(R.string.chicken_sound);
+        } else if (imageResourceId == R.drawable.pig) {
+            animalSoundText = getString(R.string.pig_sound);
+        }
 
         // Встановлюємо назву тварини
         TextView animalNameText = findViewById(R.id.animalNameText);
         String animalName = "";
         
-        // Визначаємо, яка тварина відображається
         if (imageResourceId == R.drawable.cat) {
             animalName = getString(R.string.cat);
         } else if (imageResourceId == R.drawable.dog1) {
@@ -94,6 +103,10 @@ public class AnimalActivity extends AppCompatActivity {
         }
         
         animalNameText.setText(animalName);
+        
+        // Форматуємо текст опису звуку
+        String soundDescription = String.format(getString(R.string.sound_description), animalName);
+        soundDescriptionText.setText(soundDescription + "\n" + animalSoundText);
 
         // Налаштовуємо кнопки відтворення звуку
         Button playSound1Button = findViewById(R.id.playSound1Button);
@@ -110,6 +123,7 @@ public class AnimalActivity extends AppCompatActivity {
                 currentPlayingButton = playSound1Button;
                 playSound1Button.startAnimation(pulseAnimation);
                 animalImage.startAnimation(bounceAndRotateAnimation);
+                showSoundDescription();
             }
         });
 
@@ -120,6 +134,7 @@ public class AnimalActivity extends AppCompatActivity {
                 currentPlayingButton = playSound2Button;
                 playSound2Button.startAnimation(pulseAnimation);
                 animalImage.startAnimation(bounceAndRotateAnimation);
+                showSoundDescription();
             }
         });
 
@@ -154,6 +169,7 @@ public class AnimalActivity extends AppCompatActivity {
             currentPlayingButton.clearAnimation();
             currentPlayingButton = null;
         }
+        soundDescriptionText.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -194,5 +210,14 @@ public class AnimalActivity extends AppCompatActivity {
         // Highlight the clicked button
         button.setSelected(true);
         selectedButton = button;
+    }
+
+    private void showSoundDescription() {
+        soundDescriptionText.setVisibility(View.VISIBLE);
+        soundDescriptionText.setAlpha(0f);
+        soundDescriptionText.animate()
+                .alpha(1f)
+                .setDuration(500)
+                .start();
     }
 }
