@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnmlVoices App</string>
+    <string name="cat">Cat</string>
+    <string name="cow">Cow</string>
+    <string name="dog">Dog</string>
+    <string name="animal_image">Animal image</string>
+    <string name="play_sound">Play sound</string>
+    <string name="back">Back</string>
+    <string name="ukrainian">Ukrainian</string>
+    <string name="english">English</string>
+    <string name="french">French</string>
+    <string name="play_sound_1">Sound 1</string>
+    <string name="play_sound_2">Sound 2</string>
+</resources> 

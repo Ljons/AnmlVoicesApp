@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnmlVoices App</string>
+    <string name="logo_text">Скільки?</string>
+    <string name="hint_1">число1</string>
+    <string name="hint_2">число2</string>
+    <string name="nextPage">Наступна сторінка</string>
+    <string name="first_fragment_label">Перший фрагмент</string>
+    <string name="second_fragment_label">Другий фрагмент</string>
+    <string name="next">Далі</string>
+    <string name="previous">Назад</string>
+    <string name="hello_blank_fragment">Привіт, порожній фрагмент</string>
+    <string name="dogVoice">гав-гав, ав-ав</string>
+</resources>

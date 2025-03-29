@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnmlVoices App</string>
+    <string name="logo_text">Combien?</string>
+    <string name="hint_1">nombre1</string>
+    <string name="hint_2">nombre2</string>
+    <string name="nextPage">Page suivante</string>
+    <string name="first_fragment_label">Premier fragment</string>
+    <string name="second_fragment_label">Deuxième fragment</string>
+    <string name="next">Suivant</string>
+    <string name="previous">Précédent</string>
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="dogVoice">ау-ау (ouah ouah)</string>
+    <string name="cat">Chat</string>
+    <string name="cow">Vache</string>
+    <string name="dog">Chien</string>
+    <string name="animal_image">Image d\'animal</string>
+    <string name="play_sound">Jouer le son</string>
+    <string name="back">Retour</string>
+    <string name="ukrainian">Ukrainien</string>
+    <string name="english">Anglais</string>
+    <string name="french">Français</string>
+    <string name="play_sound_1">Son 1</string>
+    <string name="play_sound_2">Son 2</string>
+</resources>
