@@ -42,6 +42,25 @@ public class AnimalActivity extends AppCompatActivity {
         ImageView animalImage = findViewById(R.id.animalImage);
         animalImage.setImageResource(imageResourceId);
 
+        // Встановлюємо назву тварини
+        TextView animalNameText = findViewById(R.id.animalNameText);
+        String animalName = "";
+        
+        // Визначаємо, яка тварина відображається
+        if (imageResourceId == R.drawable.cat) {
+            animalName = getString(R.string.cat);
+        } else if (imageResourceId == R.drawable.dog1) {
+            animalName = getString(R.string.dog);
+        } else if (imageResourceId == R.drawable.cow) {
+            animalName = getString(R.string.cow);
+        } else if (imageResourceId == R.drawable.chicken) {
+            animalName = getString(R.string.chicken);
+        } else if (imageResourceId == R.drawable.pig) {
+            animalName = getString(R.string.pig);
+        }
+        
+        animalNameText.setText(animalName);
+
         // Налаштовуємо кнопки відтворення звуку
         Button playSound1Button = findViewById(R.id.playSound1Button);
         Button playSound2Button = findViewById(R.id.playSound2Button);
