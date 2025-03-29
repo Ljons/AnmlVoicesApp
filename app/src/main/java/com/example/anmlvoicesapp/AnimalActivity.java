@@ -28,7 +28,9 @@ public class AnimalActivity extends AppCompatActivity {
     private int soundResourceId2;
     private LanguageManager languageManager;
     private Animation pulseAnimation;
+    private Animation bounceAndRotateAnimation;
     private Button currentPlayingButton;
+    private boolean isAnimating = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,24 @@ public class AnimalActivity extends AppCompatActivity {
         languageManager.applyLanguage(this);
         setContentView(R.layout.activity_animal);
 
-        // Ініціалізуємо анімацію
+        // Ініціалізуємо анімації
         pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulse_animation);
+        bounceAndRotateAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce_and_rotate);
+        
+        bounceAndRotateAnimation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                isAnimating = true;
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                isAnimating = false;
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
 
         // Отримуємо дані з Intent
         Intent intent = getIntent();
@@ -49,6 +67,14 @@ public class AnimalActivity extends AppCompatActivity {
         // Встановлюємо зображення
         ImageView animalImage = findViewById(R.id.animalImage);
         animalImage.setImageResource(imageResourceId);
+
+        // Додаємо обробник натискання на зображення
+        animalImage.setOnClickListener(v -> {
+            if (!isAnimating) {
+                v.startAnimation(bounceAndRotateAnimation);
+                playSound(soundResourceId1);
+            }
+        });
 
         // Встановлюємо назву тварини
         TextView animalNameText = findViewById(R.id.animalNameText);
@@ -78,17 +104,23 @@ public class AnimalActivity extends AppCompatActivity {
         playSound2Button.setText(getString(R.string.play_sound_2));
 
         playSound1Button.setOnClickListener(v -> {
-            stopCurrentSound();
-            playSound(soundResourceId1);
-            currentPlayingButton = playSound1Button;
-            playSound1Button.startAnimation(pulseAnimation);
+            if (!isAnimating) {
+                stopCurrentSound();
+                playSound(soundResourceId1);
+                currentPlayingButton = playSound1Button;
+                playSound1Button.startAnimation(pulseAnimation);
+                animalImage.startAnimation(bounceAndRotateAnimation);
+            }
         });
 
         playSound2Button.setOnClickListener(v -> {
-            stopCurrentSound();
-            playSound(soundResourceId2);
-            currentPlayingButton = playSound2Button;
-            playSound2Button.startAnimation(pulseAnimation);
+            if (!isAnimating) {
+                stopCurrentSound();
+                playSound(soundResourceId2);
+                currentPlayingButton = playSound2Button;
+                playSound2Button.startAnimation(pulseAnimation);
+                animalImage.startAnimation(bounceAndRotateAnimation);
+            }
         });
 
         // Налаштовуємо кнопку "Назад"

@@ -13,15 +13,23 @@
         android:layout_height="0dp"
         android:layout_weight="0.7" />
 
-    <ImageView
-        android:id="@+id/animalImage"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/circle_button"
-        android:padding="8dp"
-        android:scaleType="centerCrop"
-        android:elevation="8dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="120dp"
+        app:cardElevation="12dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#00FFFFFF">
+
+        <ImageView
+            android:id="@+id/animalImage"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:background="@drawable/circle_button"
+            android:padding="8dp"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/animalNameText"
@@ -31,13 +39,14 @@
         android:background="#00FFFFFF"
         android:padding="12dp"
         android:textColor="@color/text_color"
-        android:textSize="36sp"
+        android:textSize="42sp"
         android:textStyle="bold"
         android:shadowColor="#80000000"
         android:shadowDx="2"
         android:shadowDy="2"
         android:shadowRadius="4"
-        android:elevation="4dp"/>
+        android:elevation="4dp"
+        android:fontFamily="casual"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -58,7 +67,9 @@
             android:padding="16dp"
             android:drawableStart="@android:drawable/ic_lock_silent_mode_off"
             android:drawablePadding="8dp"
-            android:elevation="4dp"/>
+            android:elevation="8dp"
+            android:textSize="18sp"
+            android:fontFamily="casual"/>
 
         <Button
             android:id="@+id/playSound2Button"
@@ -70,7 +81,9 @@
             android:padding="16dp"
             android:drawableStart="@android:drawable/ic_lock_silent_mode_off"
             android:drawablePadding="8dp"
-            android:elevation="4dp"/>
+            android:elevation="8dp"
+            android:textSize="18sp"
+            android:fontFamily="casual"/>
     </LinearLayout>
 
     <Button
@@ -84,7 +97,9 @@
         android:padding="16dp"
         android:drawableStart="@android:drawable/ic_menu_revert"
         android:drawablePadding="8dp"
-        android:elevation="4dp"/>
+        android:elevation="8dp"
+        android:textSize="18sp"
+        android:fontFamily="casual"/>
 
     <Space
         android:layout_width="match_parent"
